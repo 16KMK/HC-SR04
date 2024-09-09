@@ -1,0 +1,2 @@
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:12:9:hc_sr04_hw_us_delay	24	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:49:6:HAL_TIM_IC_CaptureCallback	16	static
