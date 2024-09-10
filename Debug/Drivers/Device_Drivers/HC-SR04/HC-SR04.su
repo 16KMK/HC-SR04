@@ -1,1 +1,1 @@
-../Drivers/Device_Drivers/HC-SR04/HC-SR04.c:3:17:generate_us_delay	24	static
+../Drivers/Device_Drivers/HC-SR04/HC-SR04.c:5:6:HC_SR04_ReadDistance	24	static

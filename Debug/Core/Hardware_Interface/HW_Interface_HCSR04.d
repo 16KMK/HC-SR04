@@ -26,7 +26,6 @@ Core/Hardware_Interface/HW_Interface_HCSR04.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/../../ARM_Drivers/Delay_micros/dwt_stm32_delay.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HC-SR04/HC-SR04.h
 ../Core/Hardware_Interface/HW_Interface_HCSR04.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -54,5 +53,4 @@ Core/Hardware_Interface/HW_Interface_HCSR04.o: \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Drivers/STM32F1xx_HAL_Driver/Inc/../../ARM_Drivers/Delay_micros/dwt_stm32_delay.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HC-SR04/HC-SR04.h:

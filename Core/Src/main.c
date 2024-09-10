@@ -21,7 +21,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "../../Drivers/Device_Drivers/HC-SR04/HC-SR04.h"
+#include "../../Core/Hardware_Interface/HW_Interface_HCSR04.h"
+#include "../../Device_Drivers/HD44780_LCD/HD44780_LCD.h"
+#include "stdio.h"
+
+extern HCSR04_t hc;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,7 +97,19 @@ int main(void) {
 	MX_TIM1_Init();
 	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
+	GPIO_InitTypeDef G = { .Pin = TRIG_PIN, .Mode = GPIO_MODE_OUTPUT_PP,
+			.Speed = GPIO_SPEED_FREQ_LOW };
 
+	HAL_GPIO_Init(TRIG_PORT, &G);
+
+	G.Pin = ECHO_PIN;
+	G.Mode = GPIO_MODE_INPUT;
+	G.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(ECHO_PORT, &G);
+
+	float dist = 0;
+
+	char num[32];
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -102,12 +118,11 @@ int main(void) {
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
-		/*HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET);
-		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_RESET);
-		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_SET);
-		 if (HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET) == 1) {
-		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_RESET);
-		 }*/
+		HC_SR04_ReadDistance(&hc, &dist);
+
+		uint16_t display = sprintf(num,"Distance=%.2f cm\r\n", dist*100);
+		HAL_UART_Transmit(&huart1, num, display, 100);
+		HAL_Delay(100);
 	}
 	/* USER CODE END 3 */
 }

@@ -24,7 +24,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Src/../../Drivers/Device_Drivers/HC-SR04/HC-SR04.h
+ ../Core/Src/../../Core/Hardware_Interface/HW_Interface_HCSR04.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HC-SR04/HC-SR04.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HD44780_LCD/HD44780_LCD.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HD44780_LCD/../../ARM_Drivers/Delay_Micros/dwt_stm32_delay.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -51,4 +54,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Core/Src/../../Drivers/Device_Drivers/HC-SR04/HC-SR04.h:
+../Core/Src/../../Core/Hardware_Interface/HW_Interface_HCSR04.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HC-SR04/HC-SR04.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HD44780_LCD/HD44780_LCD.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/../../Device_Drivers/HD44780_LCD/../../ARM_Drivers/Delay_Micros/dwt_stm32_delay.h:

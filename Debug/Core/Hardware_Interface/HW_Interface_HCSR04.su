@@ -1,2 +1,5 @@
-../Core/Hardware_Interface/HW_Interface_HCSR04.c:12:9:hc_sr04_hw_us_delay	24	static
-../Core/Hardware_Interface/HW_Interface_HCSR04.c:49:6:HAL_TIM_IC_CaptureCallback	16	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:19:6:hw_trigger	8	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:30:9:hw_read_echo	8	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:34:9:hw_us_delay	24	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:59:6:Timer_Start	8	static
+../Core/Hardware_Interface/HW_Interface_HCSR04.c:63:10:Timer_Stop	8	static
